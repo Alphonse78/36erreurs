@@ -1,6 +1,7 @@
 <?php
 namespace Controller;
 use ThirtySix\Connexion;
+use Model\Nominee;
 
 class CesarController{
   public function gagnantsAction(){

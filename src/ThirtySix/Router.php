@@ -5,7 +5,7 @@ class Router{
 
   public static function load($controller_name, $action_name){
 
-    $class_name = "\Controller\\".ucfirst($controller_name)."Controller";
+    $class_name = "Controller".ucfirst($controller_name)."Controller";
 
     if(!class_exists($class_name))
       throw new Exception\ControllerNotFound("Le controller ".$controller_name." est introuvable");
@@ -16,7 +16,7 @@ class Router{
 
     if(!method_exists($controller,$action))
       throw new Exception\ControllerNotFound("L'action ".$action_name." est introuvable dans le controller ".$controller_name);
-    
+     
     return [$controller, $action];
   }
 }
